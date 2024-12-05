@@ -46,7 +46,7 @@ pipeline {
         stage('deploy application on kubernetes cluster') {
             steps {
                 withKubeConfig([
-                    credentialsId: 'KUBCONFIG',
+                    credentialsId: 'KUBECONFIG',
                     serverUrl: 'https://kubernetes.default',
                     namespace: 'default'
                 ]) {
